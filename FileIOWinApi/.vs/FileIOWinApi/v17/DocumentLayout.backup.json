@@ -1,15 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\leandro\\Desktop\\WinApi\\FileIOWinApi\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{9F56DF37-71F9-4865-9E5F-D6144DAC357E}|..\\FileIOCpp\\FileIOCpp.vcxproj|C:\\Users\\leandro\\Desktop\\WinApi\\FileIOCpp\\FileIOCpp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0540CDBC-481C-4DC9-B379-989349B9FF59}|FileIOWinApi.vcxproj|C:\\Users\\leandro\\Desktop\\WinApi\\FileIOWinApi\\FileIOWinApi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0540CDBC-481C-4DC9-B379-989349B9FF59}|FileIOWinApi.vcxproj|solutionrelative:FileIOWinApi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    }
-  ],
+  "WorkspaceRootPath": "D:\\2. SOFTWARE\\3. PROJETOS LEGADOS\\TESTES\\WinApi\\FileIOWinApi\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -17,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,32 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FileIOCpp.cpp",
-              "DocumentMoniker": "C:\\Users\\leandro\\Desktop\\WinApi\\FileIOCpp\\FileIOCpp.cpp",
-              "RelativeDocumentMoniker": "..\\FileIOCpp\\FileIOCpp.cpp",
-              "ToolTip": "C:\\Users\\leandro\\Desktop\\WinApi\\FileIOCpp\\FileIOCpp.cpp",
-              "RelativeToolTip": "..\\FileIOCpp\\FileIOCpp.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-18T19:09:41.843Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FileIOWinApi.cpp",
-              "DocumentMoniker": "C:\\Users\\leandro\\Desktop\\WinApi\\FileIOWinApi\\FileIOWinApi.cpp",
-              "RelativeDocumentMoniker": "FileIOWinApi.cpp",
-              "ToolTip": "C:\\Users\\leandro\\Desktop\\WinApi\\FileIOWinApi\\FileIOWinApi.cpp",
-              "RelativeToolTip": "FileIOWinApi.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGgBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-18T19:08:27.128Z",
-              "EditorCaption": ""
             }
           ]
         }
