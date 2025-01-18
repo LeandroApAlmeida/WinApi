@@ -7,7 +7,8 @@
     Este programa faz exatamente a mesma coisa que o programa em C faz, usando chamadas às API do
     Windows, porém este utiliza os recursos padrão da linguagem C++, que "por debaixo do capô", também
     fazem uso de chamadas à API do Windows, porém abstraídas em recursos da própria linguagem como nas
-    classes de stream std::wofstream e std::wifstream.
+    classes de stream std::wofstream e std::wifstream, utilizadas respectivamente para gravar no arquivo
+    e ler dados dele.
 */
 
 int main() {
@@ -22,7 +23,7 @@ int main() {
     std::wofstream outFile(filename);
 
     if (!outFile) {
-        std::wcerr << L"Erro ao criar o arquivo para escrita." << std::endl;
+        std::wcerr << L"Erro ao abrir o arquivo para escrita." << std::endl;
         return 1;
     }
     else {

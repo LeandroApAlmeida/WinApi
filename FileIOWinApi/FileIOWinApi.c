@@ -59,7 +59,7 @@ typedef BOOL(WINAPI* ReadFile_t)(
     DWORD nNumberOfBytesToRead,    // Número de bytes a serem lidos do arquivo.
     LPDWORD lpNumberOfBytesRead,   // Ponteiro para a variável que receberá o número de bytes lidos.
     LPOVERLAPPED lpOverlapped      // Estrutura OVERLAPPED usada para operações assíncronas.
-    );
+);
 
 
 // WriteFile_t: Tipo de ponteiro para a função de escrita do arquivo.
@@ -69,7 +69,7 @@ typedef BOOL(WINAPI* WriteFile_t)(
     DWORD nNumberOfBytesToWrite,   // Número de bytes a serem escritos no arquivo.
     LPDWORD lpNumberOfBytesWritten,// Ponteiro para a variável que receberá o número de bytes escritos.
     LPOVERLAPPED lpOverlapped      // Estrutura OVERLAPPED usada para operações assíncronas.
-    );
+);
 
 
 // CreateFileW_t: Tipo de ponteiro para a função de abertura/criação do arquivo.
@@ -82,13 +82,26 @@ typedef HANDLE(WINAPI* CreateFileW_t)(
     DWORD dwCreationDisposition,    // Especifica a ação a ser tomada ao criar/abrir o arquivo.
     DWORD dwFlagsAndAttributes,     // Especifica atributos e bandeiras do arquivo.
     HANDLE hTemplateFile            // Handle que fornece os atributos a serem aplicados ao arquivo criado.
-    );
+);
 
 
 /*
     Declaração dos tipos de ponteiros de função para acesso em tempo de execução às funções de criação e
     exibição de uma caixa de diálogo padrão do Windows Forms. Este diálogo já "vem pronto", de forma que
-    não precisamos criar nenhum controle dentro dele e manipular eventos.
+    não precisamos criar nenhum controle dentro dele e manipular eventos. São os MessageBox que chamamos
+    em linguagens de alto nível, com opções de botões, "Sim", "Não", "Cancelar", "Ok". Em C#, por exemplo,
+    teríamos algo como:
+
+    MessageBox.Show(
+        "Olá mundo!", 
+        "Título do diálogo",
+        MessageBoxButtons.OKCancel, 
+        MessageBoxIcon.Question
+    );
+
+    O .Net framework, "por debaixo do capô", realiza uma chamada à API do Windows para obter o diálogo que
+    será exibido ao se executar o método Show da classe MessageBox.
+
 */
 
 
@@ -99,7 +112,7 @@ typedef int (WINAPI* MessageBoxW_t)(
     LPCWSTR,         // Texto da mensagem a ser exibida na caixa de diálogo.
     LPCWSTR,         // Texto do título da caixa de diálogo.
     UINT             // Especifica o estilo da caixa de diálogo (botões, ícone).
-    );
+);
 
 
 
@@ -172,7 +185,7 @@ BOOL readFile(const wchar_t* filename) {
 
     if (pCreateFileW == NULL || pReadFile == NULL) {
         // Se houve erro ao obter a função CreateFileW ou ReadFile, retorna false.
-        wprintf(L"Erro ao obter endereços das funções.\n");
+        wprintf(L"Erro ao obter o endereço da função CreateFileW ou ReadFile.\n");
         FreeLibrary(hKernel32);
         return FALSE;
     }
@@ -199,8 +212,9 @@ BOOL readFile(const wchar_t* filename) {
     DWORD bytesRead;
 
     // Buffer aonde os bytes lidos serão armazenados. O buffer pode conter até 1024 bytes.
-    // Como obtém apenas o texto "Ola mundo!", vai sobrar a maioria do buffer, e isso
-    // é intencional, para demonstrar a função do caracterer '\0' finalizando a string.
+    // Como obtém apenas o texto "Ola mundo!", vai preencher apenas parcial com dados do
+    // arquivo, e isso é intencional, para demonstrar a função do caracterer '\0' finalizando
+    // a string.
     char buffer[1024];
 
     // Lê os primeiros 1024 bytes do arquivo no buffer, ou, no caso, todo o conteúdo do 
@@ -229,8 +243,7 @@ BOOL readFile(const wchar_t* filename) {
         // Exibe o conteúdo do arquivo no diálogo.
         showMessageBox(wbuffer);
 
-    }
-    else {
+    } else {
 
         wprintf(L"Erro ao ler o arquivo.\n");
 
@@ -245,8 +258,8 @@ BOOL readFile(const wchar_t* filename) {
 
 
 /// <summary>
-/// Este método grava o array de BYTE chamado "data" passado como parâmetro no arquivo com o
-/// path definido em fileName.
+/// Este método grava o array de BYTE chamado "data", passado como parâmetro, no arquivo com o
+/// path definido em fileName, tudo via chamadas à API do Windows.
 /// </summary>
 /// <param name="filename">Path do arquivo a ser escrito o array de bytes.</param>
 /// <param name="data">Array de bytes a ser gravado no arquivo.</param>
@@ -270,7 +283,7 @@ BOOL writeFile(const wchar_t* filename, const BYTE* data, DWORD dataSize) {
 
     if (pCreateFileW == NULL || pWriteFile == NULL) {
         // Se houve erro ao obter a função CreateFileW ou WriteFile, retorna false.
-        wprintf(L"Erro ao obter endereços das funções.\n");
+        wprintf(L"Erro ao obter o endereço da função CreateFileW ou WriteFile.\n");
         FreeLibrary(hKernel32);
         return FALSE;
     }
@@ -352,7 +365,7 @@ int main() {
 
     }
 
-    wprintf(L"Pressiona qualquer tecla para sair...");
+    wprintf(L"Pressione qualquer tecla para sair...");
 
     getchar();
 
