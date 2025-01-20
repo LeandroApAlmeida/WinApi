@@ -3,11 +3,8 @@
   "WorkspaceRootPath": "D:\\2. SOFTWARE\\3. PROJETOS LEGADOS\\TESTES\\WinApi\\FileIOWinApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9F56DF37-71F9-4865-9E5F-D6144DAC357E}|..\\FileIOCpp\\FileIOCpp.vcxproj|D:\\2. SOFTWARE\\3. PROJETOS LEGADOS\\TESTES\\WinApi\\FileIOCpp\\FileIOCpp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0540CDBC-481C-4DC9-B379-989349B9FF59}|FileIOWinApi.vcxproj|D:\\2. SOFTWARE\\3. PROJETOS LEGADOS\\TESTES\\WinApi\\FileIOWinApi\\FileIOWinApi.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0540CDBC-481C-4DC9-B379-989349B9FF59}|FileIOWinApi.vcxproj|solutionrelative:FileIOWinApi.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\2. SOFTWARE\\3. PROJETOS LEGADOS\\TESTES\\WinApi\\FileIOWinApi\\FileIOWinApi.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FileIOWinApi.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,25 +35,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FileIOCpp.cpp",
-              "DocumentMoniker": "D:\\2. SOFTWARE\\3. PROJETOS LEGADOS\\TESTES\\WinApi\\FileIOCpp\\FileIOCpp.cpp",
-              "RelativeDocumentMoniker": "..\\FileIOCpp\\FileIOCpp.cpp",
-              "ToolTip": "D:\\2. SOFTWARE\\3. PROJETOS LEGADOS\\TESTES\\WinApi\\FileIOCpp\\FileIOCpp.cpp",
-              "RelativeToolTip": "..\\FileIOCpp\\FileIOCpp.cpp",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAACEAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-18T22:48:04.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "FileIOWinApi.c",
               "DocumentMoniker": "D:\\2. SOFTWARE\\3. PROJETOS LEGADOS\\TESTES\\WinApi\\FileIOWinApi\\FileIOWinApi.c",
               "RelativeDocumentMoniker": "FileIOWinApi.c",
               "ToolTip": "D:\\2. SOFTWARE\\3. PROJETOS LEGADOS\\TESTES\\WinApi\\FileIOWinApi\\FileIOWinApi.c",
               "RelativeToolTip": "FileIOWinApi.c",
-              "ViewState": "AgIAAFgBAAAAAAAAAAAAAGIAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-01-18T22:38:01.573Z",
               "EditorCaption": ""

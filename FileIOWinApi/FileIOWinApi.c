@@ -18,16 +18,14 @@
     alterar valores em registradores do mesmo, carregar os drivers necessários, etc, etc, etc. Depois
     de resolver todas estas etapas de grau de complexidade bastante alto, e muito enfadonhas para um ser
     humano ficar se ocupando delas toda vez que apenas quer abrir uma planilha de finanças, o Kernel do
-    sistema Windows devolve os bytes do arquivo, ou os recebe, por meio de chamadas de funções com nomes muito
-    sugestivos como "ReadFile" e "WriteFile" disponíveis em dll's (no caso, kernel32.dll), que no contexto
-    do sistema Windows, nada mais são do que executáveis comuns, assim como os arquivos .exe, porém elas
+    sistema Windows devolve os bytes do arquivo, ou os recebe, por intermédio de DLLs com funções com nomes
+    sugestivos como "ReadFile" e "WriteFile", neste caso, disponíveis em kernel32.dll. No contexto do sistema
+    Windows, as DLLs nada mais são do que executáveis comuns, assim como os arquivos .exe, porém elas
     funcionam como componentes separados fisicamente do executável principal do programa, se é que podemos
-    dizer assim de arquivos binários, e normalmente são carregadas na área de memória do programa apenas
-    quando o executável precisa de alguma funcionalidade disponível nelas. É como se seu fígado ficasse fora
-    do seu abdôme, e você só o recolocasse no lugar quando precisasse dele, pois o fígado faz parte do seu
-    corpo, e sem ele você não teria as funções necessárias para manter-se vivo. A analogia foi horrível, eu
-    sei, mas é aproximadamente dessa forma que estou carregando as DLL's do Windows que vou usar para ler e
-    gravar um arquivo via chamada à API do Windows e exibir o texto do arquivo numa caixa de diálogo padrão.
+    dizer assim de arquivos binários, e podem ser compartilhadas. Normalmente são carregadas na memória RAM 
+    apenas quando o executável precisa de alguma funcionalidade disponível nelas. É como se seu fígado ficasse
+    fora do seu abdôme, e você só o recolocasse no lugar quando precisasse dele, pois o fígado faz parte do 
+    seu corpo, e sem ele você não teria as funções necessárias para manter-se vivo.
 
     Se você for alguém que quer desenvolver um compilador para Windows, para implementar uma nova linguagem
     de programação, ou apenas alguém que reflete sobre coisas aleatórias como eu, e quiser consultar a
@@ -124,7 +122,7 @@ typedef int (WINAPI* MessageBoxW_t)(
 /// <param name="message">Texto a ser exibido na caixa de mensagem</param>
 BOOL showMessageBox(const wchar_t* message) {
 
-    // Carrega user32.dll para a área de memória do programa.
+    // Carrega user32.dll.
     HMODULE hUser32 = LoadLibraryEx(L"user32.dll", NULL, LOAD_LIBRARY_SEARCH_SYSTEM32);
 
     if (hUser32 == NULL) {
@@ -169,7 +167,7 @@ BOOL showMessageBox(const wchar_t* message) {
 /// <returns>True, se o arquivo foi aberto. False se houve erro ao abrir o arquivo.</returns>
 BOOL readFile(const wchar_t* filename) {
 
-    // Carrega kernel32.dll para a área de memória do programa.
+    // Carrega kernel32.dll.
     HMODULE hKernel32 = LoadLibraryEx(L"kernel32.dll", NULL, LOAD_LIBRARY_SEARCH_SYSTEM32);
 
     if (hKernel32 == NULL) {
@@ -267,7 +265,7 @@ BOOL readFile(const wchar_t* filename) {
 /// <returns>True, se o arquivo foi gravado. False se houve erro ao gravar o arquivo.</returns>
 BOOL writeFile(const wchar_t* filename, const BYTE* data, DWORD dataSize) {
 
-    // Carrega kernel32.dll para a área de memória do programa.
+    // Carrega kernel32.dll.
     HMODULE hKernel32 = LoadLibraryEx(L"kernel32.dll", NULL, LOAD_LIBRARY_SEARCH_SYSTEM32);
 
     if (hKernel32 == NULL) {
