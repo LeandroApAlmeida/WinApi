@@ -6,7 +6,7 @@ Programa para demonstração de leitura e escrita de arquivo via API do Windows.
 
 <br>
 
-Em FileIOWinApi se encontra o programa escrito em linguagem C para leitura e escrita de um arquivo e exibição do texto do arquivo em um diálogo padrão usando chamadas à API do Windows. Neste programa, utilizamos funções disponíveis em kernel32.dll e user32.dll que disponibilizam tais funções.
+Em FileIOWinApi se encontra o programa escrito em linguagem C para leitura e escrita de um arquivo e exibição do texto do arquivo em um diálogo padrão usando chamadas à API do Windows. Neste programa, utilizamos funções disponíveis em kernel32.dll e user32.dll.
 
 <br>
 
