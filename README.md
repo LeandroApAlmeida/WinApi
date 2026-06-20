@@ -1,4 +1,8 @@
-Programa para demonstração de leitura e escrita de arquivo via API do Windows.
+<h3>Leitura e escrita de arquivos via API do Windows</h3>
+
+<br>
+
+Este programa é uma demonstração da leitura e escrita de arquivo via API do Windows.
 
 <br>
 
